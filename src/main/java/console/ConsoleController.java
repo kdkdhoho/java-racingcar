@@ -1,6 +1,5 @@
 package console;
 
-import domain.core.Car;
 import domain.core.RacingGame;
 import domain.core.RandomNumberGenerator;
 import domain.vo.Record;
@@ -19,7 +18,7 @@ public class ConsoleController {
         List<List<Record>> playRecords = racingGame.playGame();
         printer.printPlayRecords(playRecords);
 
-        List<Car> winners = racingGame.winners();
+        List<Record> winners = racingGame.winners();
         printer.printWinners(winners);
     }
 }

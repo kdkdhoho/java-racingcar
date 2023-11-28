@@ -32,7 +32,7 @@ class RacingGameTest {
     @Test
     void 우승자를_반환한다() {
         // when
-        List<Car> winners = racingGame.winners();
+        List<Record> winners = racingGame.winners();
 
         // then
         assertSoftly(softly -> {

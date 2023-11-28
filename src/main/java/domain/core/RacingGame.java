@@ -44,7 +44,11 @@ public class RacingGame {
                 .collect(Collectors.toList());
     }
 
-    public List<Car> winners() {
-        return cars.winners();
+    public List<Record> winners() {
+        List<Car> winners = cars.winners();
+
+        return winners.stream()
+                .map(car -> new Record(car.name(), car.distance()))
+                .collect(Collectors.toList());
     }
 }

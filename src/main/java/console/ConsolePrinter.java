@@ -1,6 +1,5 @@
 package console;
 
-import domain.core.Car;
 import domain.vo.Record;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -20,9 +19,9 @@ public class ConsolePrinter {
         System.out.print(stringBuilder);
     }
 
-    public void printWinners(List<Car> winners) {
+    public void printWinners(List<Record> winners) {
         String winnerNames = winners.stream()
-                .map(Car::name)
+                .map(Record::name)
                 .collect(Collectors.joining(", "));
         System.out.print(winnerNames + "가 최종 우승했습니다.");
     }
